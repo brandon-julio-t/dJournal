@@ -2,6 +2,8 @@
 pragma solidity ^0.8.20;
 
 contract JournalContractImplV1 {
+    string public constant version = "v1";
+
     struct Journal {
         string title;
         string body;
@@ -78,9 +80,5 @@ contract JournalContractImplV1 {
         }
 
         return (true, "");
-    }
-
-    function ping() external pure returns (string memory) {
-        return "pong";
     }
 }

@@ -110,8 +110,8 @@ describe('JournalContractImplV1', function () {
     });
   });
 
-  it('should respond to ping', async function () {
-    const result = await contract.ping();
-    expect(result).to.equal('pong');
+  it('should be version 1', async function () {
+    const result = await contract.version();
+    expect(result).to.equal('v1');
   });
 });
