@@ -1,0 +1,473 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xDdCd3edae59A6F2a6861A48ca9AEF9153842ffe1",
+      "txHash": "0x4457bfafd56af8c6662a12be22ae93d2fb97bb7cc37873104b6451e4a2f92011",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x86030Fe45d4b32EdFF987D78cB679853Ef301F2C",
+      "txHash": "0x55e3a4296ffe5eeadf0f3163be61ddd7291cf8a59a5dfa71e4651f1103eafc33",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x821bB79A885f2b2f694314714d0cFca39ca1B4c9",
+      "txHash": "0x92dbf288e1df4b5580b992c6c73332ff509ab6cb65b1550df14c274caf74b780",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb41f71B95Accc5EaD2D950D4B2285c0B5D48b25d",
+      "txHash": "0xd0593882d123b537b535e583b85b94787d6f4229225352afee084994bfaa7322",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "d00ffa0f68fa23514404bfe64102322701d613be8790278b5244a8ccf5910223": {
+      "address": "0xF4623Aa2420a85d046C7fF52D8436dac8d3fa09A",
+      "txHash": "0xd89896993dc28ce6bff77a2c417992fe0d4ce27fa627215db78f0393f6b52e49",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "journalDb",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_array(t_struct(Journal)17_storage)dyn_storage)",
+            "contract": "JournalContractImplV1",
+            "src": "contracts/JournalContractImplV1.sol:16"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Journal)17_storage)dyn_storage": {
+            "label": "struct JournalContractImplV1.Journal[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_struct(Journal)17_storage)dyn_storage)": {
+            "label": "mapping(address => struct JournalContractImplV1.Journal[])",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Journal)17_storage": {
+            "label": "struct JournalContractImplV1.Journal",
+            "members": [
+              {
+                "label": "title",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "body",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "isInitialized",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "updatedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "deletedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    },
+    "f8a9c7428c801b6d65a927c19f0eb116e9c8c288a2262b809890262de7e51ae2": {
+      "address": "0x339d517Eb45Ad88870eB614c0878416Aa1719E7F",
+      "txHash": "0x352ca44c2540581f66bbf78b41f1ac45b1f5f5ebd8fd341d2cc6a6d070a2def5",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "journalDb",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_array(t_struct(Journal)3967_storage)dyn_storage)",
+            "contract": "JournalContractImplV1",
+            "src": "contracts/JournalContractImplV1.sol:14"
+          },
+          {
+            "label": "erc20TokenAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "JournalContractImplV2",
+            "src": "contracts/JournalContractImplV2.sol:10"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)10_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Journal)3967_storage)dyn_storage": {
+            "label": "struct JournalContractImplV1.Journal[]",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_array(t_struct(Journal)3967_storage)dyn_storage)": {
+            "label": "mapping(address => struct JournalContractImplV1.Journal[])",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Journal)3967_storage": {
+            "label": "struct JournalContractImplV1.Journal",
+            "members": [
+              {
+                "label": "title",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "body",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "isInitialized",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "updatedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "deletedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "adc88b35f73f78062f969e466806caa71ac57b63c5987a0a0e45145d0175d8a3": {
+      "address": "0xD8dFc1942a59ba572AD39289Ffc45d65d3fc6928",
+      "txHash": "0xb74a11a164b8ad7343b26f30177b893be6b065b4eff934f377a6c106be1f3e87",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "journalDb",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_array(t_struct(Journal)3918_storage)dyn_storage)",
+            "contract": "JournalContractImplV1",
+            "src": "contracts/JournalContractImplV1.sol:14"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Journal)3918_storage)dyn_storage": {
+            "label": "struct JournalContractImplV1.Journal[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_struct(Journal)3918_storage)dyn_storage)": {
+            "label": "mapping(address => struct JournalContractImplV1.Journal[])",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Journal)3918_storage": {
+            "label": "struct JournalContractImplV1.Journal",
+            "members": [
+              {
+                "label": "title",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "body",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "isInitialized",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "updatedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "deletedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    },
+    "478b1050db28eccf9763e7791cbbd4959cbc87e354db5dbee95d2131a25787e6": {
+      "address": "0x60994b71a3FA1DF2350e3Bb3AD12120430D92De6",
+      "txHash": "0x3c42f75fd3f3d67cf8d67a1d14f69d1fe13e9d3ff301b8adf836970661d27429",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "journalDb",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_array(t_struct(Journal)3918_storage)dyn_storage)",
+            "contract": "JournalContractImplV1",
+            "src": "contracts/JournalContractImplV1.sol:14"
+          },
+          {
+            "label": "token",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_contract(ERC20JournalToken)3903",
+            "contract": "JournalContractImplV2",
+            "src": "contracts/JournalContractImplV2.sol:13"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)10_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Journal)3918_storage)dyn_storage": {
+            "label": "struct JournalContractImplV1.Journal[]",
+            "numberOfBytes": "32"
+          },
+          "t_contract(ERC20JournalToken)3903": {
+            "label": "contract ERC20JournalToken",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_array(t_struct(Journal)3918_storage)dyn_storage)": {
+            "label": "mapping(address => struct JournalContractImplV1.Journal[])",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Journal)3918_storage": {
+            "label": "struct JournalContractImplV1.Journal",
+            "members": [
+              {
+                "label": "title",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "body",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "isInitialized",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "updatedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "deletedAt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

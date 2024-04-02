@@ -3,7 +3,8 @@
   "scripts": {
     "hn": "hardhat node",
     "test": "hardhat test",
-    "hc": "hardhat compile"
+    "hc": "hardhat compile",
+    "sepolia:deploy:v1": "hardhat run scripts/deploy.v1.ts --network sepolia"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
@@ -11,6 +12,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",
-    "@openzeppelin/contracts-upgradeable": "^5.0.2"
+    "@openzeppelin/contracts-upgradeable": "^5.0.2",
+    "@openzeppelin/hardhat-upgrades": "^3.0.5",
+    "dotenv": "^16.4.5"
   }
 }
