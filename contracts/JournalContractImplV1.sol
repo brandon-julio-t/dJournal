@@ -2,8 +2,6 @@
 pragma solidity ^0.8.20;
 
 contract JournalContractImplV1 {
-    string public constant version = "v1";
-
     struct Journal {
         string title;
         string body;
@@ -18,7 +16,7 @@ contract JournalContractImplV1 {
     function createJournal(
         string calldata title,
         string calldata body
-    ) external {
+    ) public virtual {
         Journal memory newJournal = Journal({
             title: title,
             body: body,
@@ -31,7 +29,7 @@ contract JournalContractImplV1 {
         journalDb[msg.sender].push(newJournal);
     }
 
-    function getMyJournals() external view returns (Journal[] memory) {
+    function getMyJournals() public view returns (Journal[] memory) {
         return journalDb[msg.sender];
     }
 
@@ -39,7 +37,7 @@ contract JournalContractImplV1 {
         uint id,
         string calldata title,
         string calldata body
-    ) external {
+    ) public virtual {
         require(isValidId(id), "Invalid ID");
 
         Journal storage existing = journalDb[msg.sender][id];
@@ -52,7 +50,7 @@ contract JournalContractImplV1 {
         existing.updatedAt = block.timestamp;
     }
 
-    function deleteJournal(uint id) external {
+    function deleteJournal(uint id) public virtual {
         require(isValidId(id), "Invalid ID");
 
         Journal storage existing = journalDb[msg.sender][id];
@@ -80,5 +78,9 @@ contract JournalContractImplV1 {
         }
 
         return (true, "");
+    }
+
+    function version() public pure virtual returns (string memory) {
+        return "v1";
     }
 }
