@@ -21,6 +21,6 @@ main()
   });
 
 /*
-Proxy contract address: 0xb41f71B95Accc5EaD2D950D4B2285c0B5D48b25d
+Proxy contract address: 0x48d8021691c6e8a4D3346D6F12c9177f8b0B92Fa
 Implementation contract address: 0xD8dFc1942a59ba572AD39289Ffc45d65d3fc6928
 */

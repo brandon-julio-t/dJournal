@@ -4,7 +4,7 @@
     "hn": "hardhat node",
     "test": "hardhat test",
     "hc": "hardhat compile",
-    "sepolia:deploy:v1": "hardhat run scripts/deploy.v1.ts --network sepolia"
+    "s:d:1": "hardhat run scripts/deploy.v1.ts --network sepolia"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
